@@ -102,7 +102,6 @@ function App() {
 				return 'day'
 		}
 	}
-	let number = 1
 
 	//Forecast
 	let firstNumber = forecast.list && forecast.list[0].dt_txt.slice(8, 10)
@@ -163,12 +162,14 @@ function App() {
 					<div className='flex w-full'>
 						{forecast.list
 							? forecast.list.map((element, key) => {
+									let number = element.dt_txt.slice(9, 10)
 									firstNumber = '' + firstNumber
-									
+
 									if (element.dt_txt.slice(8, 10) === firstNumber) {
-										
-										if(number === 10){
+										console.log(number)
+										if (number === 10) {
 											firstNumber = 10
+											console.log('treue')
 										}
 
 										if (firstNumber[0] === '0' && number <= 9) {
