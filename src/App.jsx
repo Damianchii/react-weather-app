@@ -169,7 +169,6 @@ function App() {
 										console.log(number)
 										if (number === 10) {
 											firstNumber = 10
-											console.log('treue')
 										}
 
 										if (firstNumber[0] === '0' && number <= 9) {
